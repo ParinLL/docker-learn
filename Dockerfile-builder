@@ -1,0 +1,19 @@
+########################
+##  git clone https://github.com/harryliu123/docker-learn.git
+##  cd docker-learn
+##  docker build -t helloworld:builder . --no-cache -t Dockerfile-builder
+##  docker run --rm -p 8080:8080 -d helloworld:builder
+##  http://127.0.0.1:8080/ping  會出現  Hello World
+########################
+
+FROM golang:1.11.2-alpine as builder
+MAINTAINER harry
+WORKDIR /helloworld-go
+ADD . /helloworld-go
+RUN cd /helloworld-go && go build helloworld-go/helloworld.go
+
+FROM alpine:3.8
+MAINTAINER harry
+COPY --from=builder /helloworld-go/helloworld /usr/local/bin/helloworld
+EXPOSE 8080
+ENTRYPOINT helloworld
