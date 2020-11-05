@@ -11,8 +11,7 @@ MAINTAINER harry
 WORKDIR /helloworld-go
 ADD . /helloworld-go
 RUN cd /helloworld-go && \
-    go build helloworld-go/helloworld.go && \
-    cp -rf /helloworld-go/helloworld /usr/local/bin/helloworld
+    go build helloworld-go/helloworld.go
 	
 EXPOSE 8080
 ENTRYPOINT /helloworld-go/helloworld
