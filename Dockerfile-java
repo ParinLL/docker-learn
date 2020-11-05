@@ -11,7 +11,7 @@ RUN git clone https://github.com/harryliu123/docker-learn.git
 WORKDIR /docker-learn/helloworld-java/my-app
 RUN mvn package
 
-FROM openjdk
+FROM mcr.microsoft.com/java/jre:8-zulu-alpine
 MAINTAINER harry
 COPY --from=builder /docker-learn/helloworld-java/my-app/target/my-app-1.0-SNAPSHOT.jar /my-app-1.0-SNAPSHOT.jar
 ENTRYPOINT ["java", "-jar", "/my-app-1.0-SNAPSHOT.jar"]
