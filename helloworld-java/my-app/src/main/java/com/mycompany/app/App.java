@@ -24,6 +24,6 @@ public class App
          *
          * http://checkerframework.org
          */
-        System.out.println("... but thankfully, Checker has our back: http://checkerframework.org");
+        System.out.println("... by 關貿網路 系統開發及支援部");
     }
 }
