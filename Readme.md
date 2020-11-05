@@ -46,4 +46,4 @@ $  docker run -it  helloword:java
 
 ```
 
-![](imgs\image-20201105122922005.png)
+![](imgs/image-20201105122922005.png)
