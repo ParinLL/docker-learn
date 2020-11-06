@@ -12,6 +12,7 @@ WORKDIR /helloworld-go
 ADD . /helloworld-go
 RUN cd /helloworld-go && \
     go build helloworld-go/helloworld.go
-	
+
+VOLUME ["/var/log/"]
 EXPOSE 8080
 ENTRYPOINT /helloworld-go/helloworld
