@@ -113,3 +113,15 @@ $ docker push <帳號>/helloword-java
 6. docker hub網頁上確認 狀態
 
 ![image-20201105151842320](imgs/image-20201105151842320.png)
+
+
+
+7. 分享給別人使用你的環境
+
+   ```
+   docker run  <帳號>/helloword-java
+   ## docker run  harry101031/helloword-java
+   ```
+
+   
+
