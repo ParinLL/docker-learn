@@ -2,6 +2,7 @@
 
 + 了解與測試Dockerfile
 + 將建立的docker image 上傳到公開的docker hub上
++ 分享您的環境給別人
 
 ### Dockerfile
 
