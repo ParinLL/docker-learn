@@ -37,7 +37,7 @@ $  docker build -t helloword:v0.1 . --no-cache -f Dockerfile-1
 $  docker run -it -d -p 8081:8080 helloword:v0.1
 $  curl http://127.0.0.1:8081/ping  會出現  Hello World
 
-## 如果是使用katacoda Lab 環境由於他只開放80 port所以請修改port
+## 如果是使用katacoda Lab 環境由於他預設開放80 port所以請修改port
 $  docker run -it -d -p 80:8080 helloword:v0.1
 $  curl <https://2886795294-80-cykoria03.environments.katacoda.com>/ping  會出現  Hello World
 
