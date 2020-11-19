@@ -33,7 +33,7 @@ $  curl http://127.0.0.1:<你想要開放的port>/ping  會出現  Hello World
 ```
 $  git clone https://github.com/harryliu123/docker-learn.git
 $  cd docker-learn
-$  docker build -t helloword:v0.1 . --no-cache -f Dockerfile-1
+$  docker build -t helloword:v0.1 . --no-cache -f Dockerfile
 $  docker run -it -d -p 8081:8080 helloword:v0.1
 $  curl http://127.0.0.1:8081/ping  會出現  Hello World
 
