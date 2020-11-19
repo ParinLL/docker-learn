@@ -5,6 +5,9 @@ spec:
   - name: kaniko
     #image: lmakarov/kaniko
     image: gcr.io/kaniko-project/executor:debug
+    env:
+    - name: BUILD_ID
+      value: ${env.BUILD_ID}
     imagePullPolicy: Always
     command:
     - /busybox/cat
@@ -28,7 +31,7 @@ spec:
     stage('Build with Kaniko') {
       git 'https://github.com/harryliu123/docker-learn'
       container('kaniko') {
-        sh 'ls && /kaniko/executor -f `pwd`/Dockerfile -c `pwd` --insecure --skip-tls-verify --cache=true --destination=harryliu123/java-test:${env.BUILD_ID}'
+        sh 'ls && /kaniko/executor -f `pwd`/Dockerfile -c `pwd` --insecure --skip-tls-verify --cache=true --destination=harryliu123/java-test:${BUILD_ID}'
       }
     }
   }
