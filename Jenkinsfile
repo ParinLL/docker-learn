@@ -28,7 +28,7 @@ spec:
     stage('Build with Kaniko') {
       git 'https://github.com/harryliu123/docker-learn'
       container('kaniko') {
-        sh 'ls && /kaniko/executor -f `pwd`/Dockerfile -c `pwd` --insecure --skip-tls-verify --cache=true --destination=harryliu123/java-test:v0.5'
+        sh 'ls && /kaniko/executor -f `pwd`/Dockerfile -c `pwd` --insecure --skip-tls-verify --cache=true --destination=harryliu123/java-test:${env.BUILD_ID}'
       }
     }
   }
