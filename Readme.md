@@ -19,7 +19,7 @@
 ##### 說明:
 
 ```
-$  git clone https://github.com/harryliu123/docker-learn.git
+$  git clone https://github.com/ParinLL/docker-learn.git
 $  cd docker-learn
 $  docker build -t <image_name>:<tag> . --no-cache -f <Dockerfile>
 $  docker run -it -d -p <你想要開放的port>:8080 <image_name>:<tag>
@@ -31,7 +31,7 @@ $  curl http://127.0.0.1:<你想要開放的port>/ping  會出現  Hello World
 ##### 範例:
 
 ```
-$  git clone https://github.com/harryliu123/docker-learn.git
+$  git clone https://github.com/ParinLL/docker-learn.git
 $  cd docker-learn
 $  docker build -t helloword:v0.1 . --no-cache -f Dockerfile
 $  docker run -it -d -p 8081:8080 helloword:v0.1
@@ -50,7 +50,7 @@ $  curl <https://2886795294-80-cykoria03.environments.katacoda.com>/ping  會出
 ##### 範例:
 
 ```
-$  git clone https://github.com/harryliu123/docker-learn.git
+$  git clone https://github.com/ParinLL/docker-learn.git
 $  cd docker-learn
 $  docker build -t helloword:java . --no-cache -f Dockerfile-java
 $  docker run -it  helloword:java
@@ -109,7 +109,7 @@ $ docker login
 ## 上傳
 $ docker push <帳號>/helloword-java
 
-	The push refers to repository [docker.io/harry101031/helloword-java]
+	The push refers to repository [docker.io/dokfish/helloword-java]
 	8790a344e219: Pushed
 	bd6888799faa: Pushed
 	ace0eda3e3be: Pushed
@@ -126,7 +126,7 @@ $ docker push <帳號>/helloword-java
 
    ```
    docker run  <帳號>/helloword-java
-   ## docker run  harry101031/helloword-java
+   ## docker run  dokfish/helloword-java
    ```
 
    
