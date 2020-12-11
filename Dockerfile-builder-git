@@ -8,7 +8,7 @@
 
 FROM golang:1.11.2-alpine as builder
 MAINTAINER harry
-RUN apk --no-cache add git && git clone https://github.com/harryliu123/docker-learn.git && \
+RUN apk --no-cache add git && git clone https://github.com/ParinLL/docker-learn.git && \
     go build docker-learn/helloworld-go/helloworld.go
 
 FROM alpine:3.8
